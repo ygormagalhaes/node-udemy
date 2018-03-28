@@ -6,11 +6,10 @@ module.exports = (app) => {
 
         app.connection.query(consulta, (error, results) => {
 
-            res.send(results);
+            res.render('noticias/noticias', {noticias: results});
 
         });
         
-        // res.render('noticias/noticias');
     
     });
 

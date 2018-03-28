@@ -2,11 +2,32 @@
 	<html lang="pt-br">
 		<head>
 			<meta charset="utf-8"/>
-			<title>Notícias</title>
+			<title>Notï¿½cias</title>
 		</head>
 	<body>
 
-		<h1>Notícias</h1>
+		<h1>Notï¿½cias</h1>
+
+		<table>
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>TÃ­tulo</td>
+					<td>Texto</td>
+				</tr>
+			</thead>
+
+			<tbody>
+			<% for (noticia of noticias) { %>
+				<tr>
+					<td><%= noticia.id %></td>
+					<td><%= noticia.titulo %></td>
+					<td><%= noticia.noticia %></td>
+				</tr>
+			<% } %>
+			</tbody>
+
+		</table>
 
 	</body>
 </html>
