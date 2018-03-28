@@ -1,22 +1,10 @@
 var app = require('./config/server');
 
-app.get('/', (req, res) => {
+var routeHome = require('./app/routes/home')(app);
 
-    res.render('home/index');
+var routeFormNoticia = require('./app/routes/form-noticia')(app);
 
-});
-
-app.get('/form-noticia', (req, res) => {
-    
-    res.render('admin/form_add_noticia');
-
-});
-
-app.get('/noticias', (req, res) => {
-    
-    res.render('noticias/noticias');
-
-});
+var routeNoticias = require('./app/routes/noticias')(app);
 
 app.listen('3000', () => {
 
