@@ -1,0 +1,14 @@
+{
+  "name": "portal-noticias",
+  "version": "1.0.0",
+  "description": "Portal de notícias",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ygor Magalhães",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
