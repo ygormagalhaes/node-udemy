@@ -2,7 +2,7 @@ module.exports = (app) => {
 
     app.get('/noticias', (req, res) => {
 
-        var connection = app.connection();
+        var connection = app.config.connection();
 
         var consulta = 'SELECT * FROM noticias';
 

@@ -1,6 +1,8 @@
 var mysql = require('mysql');
 
-module.exports = () => {
+var connection = () => {
+
+    console.log('Conexão com bd!');
 
     return mysql.createConnection({
         host: '192.168.254.5',
@@ -10,3 +12,5 @@ module.exports = () => {
     });
 
 }
+
+module.exports = () => connection;
