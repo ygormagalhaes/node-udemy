@@ -1,3 +1,6 @@
-### Projeto de estudos de NodeJS e softwares correlatos ao ecossistema JavaScript.
+### Projeto para estudar NodeJS, ES6, MongoDB e softwares correlatos ao ecossistema JS.
 
-Ao utiliza-lo lembrar de configurar a conexão com o banco no arquivo config/connection.js.
+#### Para iniciar o projeto:
+1. Configurar conexão com o banco MySQL;
+2. Instalar os pacotes com **npm install**;
+3. Instalar nodemon globalmente;
