@@ -8,7 +8,9 @@ app.set('views', './app/views');
 
 app.connection = require('../config/connection');
 
-consign().include('./app/routes')
+consign()
+    .include('./app/routes')
+    .then('./app/models')
     .then('./config/connection.js')
     .into(app);
 

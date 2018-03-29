@@ -4,14 +4,13 @@ module.exports = (app) => {
 
         var connection = app.config.connection();
 
-        var consulta = 'SELECT * FROM noticias';
+        var noticiasModel = app.app.models.noticiasModel;
 
-        connection.query(consulta, (error, results) => {
-
+        noticiasModel.getNoticias(connection, (error, results) => {
+            
             res.render('noticias/noticias', {noticias: results});
 
         });
-        
     
     });
 
