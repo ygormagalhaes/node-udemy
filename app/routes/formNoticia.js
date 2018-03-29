@@ -6,4 +6,11 @@ module.exports = (app) => {
     
     });
 
+    app.post('/noticias/salvar', (req, res) => {
+        
+        var noticia = req.body;
+        res.send(noticia);
+
+    });
+
 }
