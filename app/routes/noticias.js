@@ -4,9 +4,9 @@ module.exports = (app) => {
 
         var connection = app.config.connection();
 
-        var noticiasModel = new app.app.models.NoticiaDAO(connection);
+        var noticiaDAO = new app.app.models.NoticiaDAO(connection);
 
-        noticiasModel.getNoticias((error, results) => {
+        noticiaDAO.getNoticias((error, results) => {
             
             res.render('noticias/noticias', {noticias: results});
 
