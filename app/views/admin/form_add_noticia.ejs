@@ -8,7 +8,7 @@
 
 		<h1>Adicionar notícia</h1>
 
-		<% if (typeof erros !== 'undefined') { %>
+		<% if (erros) { %>
 
 			<ul>
 				<% for (erro of erros) { %>
@@ -20,19 +20,19 @@
 
 		<form method="POST" action="/noticias/salvar">
 			<label for="titulo">Título</label>
-			<input type="text" name="titulo"/>
+			<input type="text" name="titulo" value="<%= noticia.titulo %>"/>
 			<br>
 			<label for="resumo">Resumo</label>
-			<input type="text" name="resumo"/>
+			<input type="text" name="resumo" value="<%= noticia.resumo %>"/>
 			<br>
 			<label for="autor">Autor</label>
-			<input type="text" name="autor"/>
+			<input type="text" name="autor" value="<%= noticia.autor %>"/>
 			<br>
 			<label for="data">Data</label>
-			<input type="date" name="data"/>
+			<input type="date" name="data" value="<%= noticia.data %>"/>
 			<br>
 			<label for="titulo">Texto</label>
-			<textarea name="noticia" id="texto" cols="30" rows="10"></textarea>
+			<textarea name="noticia" id="texto" cols="30" rows="10"><%= noticia.noticia %></textarea>
 			<br>
 			<button type="submit">Salvar</button>
 		</form>

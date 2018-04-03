@@ -2,7 +2,7 @@ module.exports = (app) => {
 
     app.get('/form-noticia', (req, res) => {
         
-        res.render('admin/form_add_noticia');
+        res.render('admin/form_add_noticia', {erros: null, noticia: {}});
     
     });
 
@@ -23,7 +23,7 @@ module.exports = (app) => {
         if (erros) {
 
             console.log(erros);
-            res.render('admin/form_add_noticia', {erros: erros});
+            res.render('admin/form_add_noticia', {erros: erros, noticia: noticia});
             return;
 
         }
