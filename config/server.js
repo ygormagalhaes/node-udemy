@@ -14,6 +14,7 @@ app.use(expressValidator());
 consign()
     .include('./app/routes')
     .then('./app/models')
+    .then('./app/controllers')
     .then('./config/connection.js')
     .into(app);
 
