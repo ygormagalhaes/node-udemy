@@ -1,8 +1,8 @@
-module.exports = (app) => {
+module.exports = (application) => {
 
-    app.get('/', (req, res) => {
-        
-        res.render('home/index');
+    application.get('/', (req, res) => {
+
+        application.app.controllers.home.home(application, req, res);
     
     });
 

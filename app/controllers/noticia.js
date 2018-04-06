@@ -16,7 +16,7 @@ module.exports.formNoticia = (application, req, res) => {
 
     res.render('admin/form_add_noticia', { erros: null, noticia: {} });
 
-}
+};
 
 module.exports.salvar = (application, req, res) => {
 
@@ -56,4 +56,4 @@ module.exports.salvar = (application, req, res) => {
 
     });
 
-}
+};

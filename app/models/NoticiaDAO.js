@@ -20,6 +20,13 @@ class NoticiaDAO {
 
     }
 
+    getNoticiasHome(callback) {
+
+        var consulta = 'SELECT * FROM noticias ORDER BY data DESC LIMIT 5';
+        this.connection.query(consulta, callback);
+
+    }
+
 }
 
 module.exports = () => {
